@@ -430,23 +430,3 @@ plt.xlabel('epoch')
 plt.legend(['loss','val_loss'], loc='upper left')
 plt.show()
 
-"""import keras
-from keras.models import load_model  
-name='conv2D_ICA'
-model_name = tissue + '_' + input_type + '_' + name +'_'
-model = load_model('/content/drive/My Drive/KCL internship/FENG 498/models/' + model_name + '.hdf5')
-attn_score_layer = Model(inputs=model.input, outputs=model.get_layer(index=8).output)
-attn_score_layer.summary()
-
-attn_scores=attn_score_layer.predict(signal)
-print(attn_scores[1,0,:])
-
-attn_scores=attn_scores.reshape(-1,2000);
-print(attn_scores.shape)
-mean_of_scores=np.mean(attn_scores,axis = 0) 
-print(mean_of_scores.shape)
-plt.plot(mean_of_scores)
-
-filepath='/content/drive/My Drive/KCL internship/FENG 498/averaged_ir_kl_attn_scores'
-saved_ir_kl_attn_scores=np.save(filepath, mean_of_scores)
-"""
